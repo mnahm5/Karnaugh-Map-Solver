@@ -1,0 +1,47 @@
+body {
+	background: #525252;
+}
+
+input {
+	color: #0f0f0f;
+}
+
+.modal {
+	color: #0f0f0f;
+}
+
+table {
+	border: 1px solid black;
+}
+th {
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid black;
+	background-color: lightgrey;
+}
+td {
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+	color: #e7e7e7;
+}
+
+.btn-lg {
+	margin-top: 50px;
+}
+
+#myname {
+	text-align: center;
+	color: #e7e7e7;
+}
+
+@media screen and (max-width:500px) {
+	/* smaller screens */
+	.btn-lg {
+		margin-top: 10px;
+	}
+}

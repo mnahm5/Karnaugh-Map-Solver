@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>K-Map Solver</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<h1>Karnaugh Map Solver</h1>
+<div id="myname">By MD NADIM AHMED</div>
+<!-- Sum of Products Notation Button trigger modal -->
+<button type="button" class="col-lg-offset-4 col-lg-4 col-xs-offset-2 col-xs-8 btn btn-primary btn-lg" data-toggle="modal" data-target="#SOP">
+	Sum of Products Notation
+</button>
+<!-- Product of Sums Notation Button trigger modal -->
+<button type="button" class="col-lg-offset-4 col-lg-4 col-xs-offset-2 col-xs-8 btn btn-primary btn-lg" data-toggle="modal" data-target="#POS">
+	Product of Sums Notation
+</button>
+<!-- Truth Table Button trigger modal -->
+<button type="button" class="col-lg-offset-4 col-lg-4 col-xs-offset-2 col-xs-8 btn btn-primary btn-lg" data-toggle="modal" data-target="#truth_table">
+	Enter Truth Table
+</button>
+
+<!-- Sum of Products Notation Modal -->
+<div class="modal fade bd-example-modal-sm" id="SOP" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Sum of Products Notation</h4>
+			</div>
+			<div class="modal-body">
+				<div id="SOP_input">
+					f = &Sigma; m (<input type="text" id="SOP_terms">)<br> + d (<input type="text" id="SOP_dont_cares">)
+				</div>
+				<div id="SOP_solution"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary calculate">Calculate</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Product of Sums Notation Modal -->
+<div class="modal fade bd-example-modal-sm" id="POS" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Product of Sums Notation</h4>
+			</div>
+			<div class="modal-body">
+                <div id="POS_input">
+                    F = ∏ M (<input type="text" id="POS_terms">)<br> + D (<input type="text" id="POS_dont_cares">)
+                </div>
+                <div id="POS_solution"></div>
+			</div>
+			<div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary calculate">Calculate</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Truth Table Modal -->
+<div class="modal fade" id="truth_table" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">Truth Table</h4>
+			</div>
+			<div class="modal-body table_body">
+				<label><input type="radio" name="type"> Get Min Terms</label>
+                <label><input type="radio" name="type"> Get Max Terms</label>
+				<div id="get_no_of_variables">
+					Enter number of variables: <input type="text" id="no_of_variables">
+				</div>
+				<div id="truth_table_input"></div>
+				<div id="truth_table_solution"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" id="create_table">Create Truth Table</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="scripts/function.js"></script>
+<script type="text/javascript" src="scripts/Calculator.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
